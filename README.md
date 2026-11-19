@@ -10,7 +10,7 @@
 
 ### About me
 
-I'm a computer science student at **Wayne State University** focused on **AI\ML, software engineering, and AI engineering**. I care about how things look *and* how they work. I am passionate about building applications that have AI components and also solve problems.
+I'm a computer science student at **Wayne State University** focused on **AI/ML, software engineering, and AI engineering**. I care about how things look *and* how they work. I am passionate about building applications that have AI components and also solve problems.
 
 Lately I've been building retrieval-augmented systems that cite their sources and flag their own hallucinations, and doing research on hallucination detection.
 
