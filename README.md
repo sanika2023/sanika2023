@@ -1,10 +1,9 @@
 <p align="center">
-
+  <img src="banner.svg" alt="Sanika Annadate — AI engineering and ML research. I build things with AI and ML." width="100%">
 </p>
-
 <p align="center">
   <a href="https://www.linkedin.com/in/YOUR-LINKEDIN/">LinkedIn</a> ·
-  <a href="mailto:sannadate2023@gmail.com">Email</a> ·
+  <a href="mailto:sannadate2023@gmail.com">Email</a> 
 </p>
 
 ---
