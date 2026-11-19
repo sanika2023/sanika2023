@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="banner.svg" alt="Hi, I'm Sanika — AI engineering, CS at Wayne State" width="100%">
+
 </p>
 
 <p align="center">
