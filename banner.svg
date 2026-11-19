@@ -1,73 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 380" width="1200" height="380">
-  <style>
-    .serif { font-family: Georgia, 'Times New Roman', serif; }
-    .mono  { font-family: ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace; }
-    .node  { fill: #2b3a55; }
-    .glow  { fill: #e07a5f; animation: pulse 3s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-    .g2 { animation-delay: 1s; } .g3 { animation-delay: 2s; }
-    .edge  { stroke: #2b3a55; stroke-width: 1.4; opacity: .35; }
-    .flow  { stroke: #e07a5f; stroke-width: 2; fill: none; stroke-dasharray: 6 10; animation: dash 4s linear infinite; }
-    @keyframes pulse { 0%,100% { opacity: .35; transform: scale(1); } 50% { opacity: 1; transform: scale(1.5); } }
-    @keyframes dash { to { stroke-dashoffset: -64; } }
-  </style>
-
-  <!-- card -->
-  <rect x="1" y="1" width="1198" height="378" rx="18" fill="#f4efe6" stroke="#ddd4c4" stroke-width="2"/>
-
-  <defs><clipPath id="card"><rect x="2" y="2" width="1196" height="376" rx="17"/></clipPath></defs>
-  <!-- watercolor-ish blobs: a nod to the art background -->
-  <g clip-path="url(#card)">
-  <circle cx="930" cy="120" r="150" fill="#e07a5f" opacity=".10"/>
-  <circle cx="1040" cy="250" r="120" fill="#81b29a" opacity=".14"/>
-  <circle cx="860" cy="280" r="90" fill="#f2cc8f" opacity=".25"/>
-  </g>
-
-  <!-- logo + name -->
-  <circle cx="92" cy="80" r="22" fill="#2b3a55"/>
-  <text x="92" y="86" text-anchor="middle" class="mono" font-size="16" font-weight="700" fill="#f4efe6">sk</text>
-  <text x="126" y="87" class="serif" font-size="22" font-weight="700" fill="#2b3a55">Sanika</text>
-
-  <!-- headline -->
-  <text x="72" y="168" class="mono" font-size="16" fill="#5c6b80" letter-spacing="1">AI ENGINEERING · CS @ WAYNE STATE</text>
-  <text x="70" y="240" class="serif" font-size="68" fill="#1f2a3d">Hi, I’m Sanika.</text>
-  <text x="72" y="290" class="serif" font-size="22" font-style="italic" fill="#5c6b80">Artist turned engineer. I build AI systems that</text>
-  <text x="72" y="320" class="serif" font-size="22" font-style="italic" fill="#5c6b80">show their sources and know when they’re wrong.</text>
-
-  <!-- neural net drawing -->
-  <g>
-    <!-- edges layer 1 -> 2 -->
-    <line class="edge" x1="800" y1="110" x2="930" y2="80"/>
-    <line class="edge" x1="800" y1="110" x2="930" y2="190"/>
-    <line class="edge" x1="800" y1="110" x2="930" y2="300"/>
-    <line class="edge" x1="800" y1="190" x2="930" y2="80"/>
-    <line class="edge" x1="800" y1="190" x2="930" y2="190"/>
-    <line class="edge" x1="800" y1="190" x2="930" y2="300"/>
-    <line class="edge" x1="800" y1="270" x2="930" y2="80"/>
-    <line class="edge" x1="800" y1="270" x2="930" y2="190"/>
-    <line class="edge" x1="800" y1="270" x2="930" y2="300"/>
-    <!-- edges layer 2 -> 3 -->
-    <line class="edge" x1="930" y1="80"  x2="1060" y2="140"/>
-    <line class="edge" x1="930" y1="80"  x2="1060" y2="240"/>
-    <line class="edge" x1="930" y1="190" x2="1060" y2="140"/>
-    <line class="edge" x1="930" y1="190" x2="1060" y2="240"/>
-    <line class="edge" x1="930" y1="300" x2="1060" y2="140"/>
-    <line class="edge" x1="930" y1="300" x2="1060" y2="240"/>
-    <!-- animated signal path -->
-    <polyline class="flow" points="800,190 930,80 1060,240"/>
-
-    <circle class="node" cx="800" cy="110" r="9"/>
-    <circle class="node" cx="800" cy="190" r="9"/>
-    <circle class="node" cx="800" cy="270" r="9"/>
-    <circle class="node" cx="930" cy="80"  r="11"/>
-    <circle class="node" cx="930" cy="190" r="11"/>
-    <circle class="node" cx="930" cy="300" r="11"/>
-    <circle class="node" cx="1060" cy="140" r="9"/>
-    <circle class="node" cx="1060" cy="240" r="9"/>
-
-    <circle class="glow"    cx="800"  cy="190" r="5"/>
-    <circle class="glow g2" cx="930"  cy="80"  r="5"/>
-    <circle class="glow g3" cx="1060" cy="240" r="5"/>
-  </g>
-
-  <text x="930" y="352" text-anchor="middle" class="mono" font-size="13" fill="#5c6b80" letter-spacing="2">● LEARNING · BUILDING · SHIPPING</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+<style>
+ .sans{font-family:-apple-system,'Segoe UI',Helvetica,Arial,sans-serif}
+ .mono{font-family:ui-monospace,'SFMono-Regular',Menlo,Consolas,'Liberation Mono',monospace}
+ .tok{opacity:0;animation:appear 9s ease-out infinite}
+ @keyframes appear{0%{opacity:0;transform:translateY(6px)}6%,88%{opacity:1;transform:none}96%,100%{opacity:0}}
+ .cur{animation:blink 1s steps(1) infinite}
+ @keyframes blink{50%{opacity:0}}
+</style>
+<defs>
+ <linearGradient id="ink" x1="0" x2="1">
+  <stop offset="0" stop-color="#ff8fc7"/><stop offset=".5" stop-color="#d38cff"/><stop offset="1" stop-color="#9d7bff"/>
+ </linearGradient>
+ <pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.2" fill="#ffffff" opacity=".06"/></pattern>
+ <clipPath id="c"><rect width="1200" height="400" rx="20"/></clipPath>
+</defs>
+<g clip-path="url(#c)">
+<rect width="1200" height="400" fill="#1a1224"/>
+<rect width="1200" height="400" fill="url(#dots)"/>
+<circle cx="80" cy="380" r="220" fill="#ff8fc7" opacity=".10"/>
+<circle cx="1140" cy="10" r="200" fill="#9d7bff" opacity=".12"/>
+</g>
+<text x="600" y="62" text-anchor="middle" class="mono" font-size="15" fill="#a593c2" letter-spacing="1">&gt; model.generate(profile="sanika2023")</text>
+<text x="600" y="150" text-anchor="middle" class="sans" font-size="76" font-weight="800" fill="url(#ink)" letter-spacing="-2">Sanika Annadate</text>
+<g class="tok" style="animation-delay:0.00s">
+ <rect x="366.0" y="190" width="52.0" height="36" rx="8" fill="#ff8fc7" fill-opacity=".12" stroke="#ff8fc7" stroke-opacity=".6"/>
+ <text x="392.0" y="214" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">AI</text>
+</g>
+<g class="tok" style="animation-delay:0.35s">
+ <rect x="428.0" y="190" width="160.0" height="36" rx="8" fill="#f78ed1" fill-opacity=".12" stroke="#f78ed1" stroke-opacity=".6"/>
+ <text x="508.0" y="214" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">engineering</text>
+</g>
+<g class="tok" style="animation-delay:0.70s">
+ <rect x="598.0" y="190" width="40.0" height="36" rx="8" fill="#ef8edb" fill-opacity=".12" stroke="#ef8edb" stroke-opacity=".6"/>
+ <text x="618.0" y="214" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">+</text>
+</g>
+<g class="tok" style="animation-delay:1.05s">
+ <rect x="648.0" y="190" width="52.0" height="36" rx="8" fill="#e78de6" fill-opacity=".12" stroke="#e78de6" stroke-opacity=".6"/>
+ <text x="674.0" y="214" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">ML</text>
+</g>
+<g class="tok" style="animation-delay:1.40s">
+ <rect x="710.0" y="190" width="124.0" height="36" rx="8" fill="#df8df0" fill-opacity=".12" stroke="#df8df0" stroke-opacity=".6"/>
+ <text x="772.0" y="214" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">research</text>
+</g>
+<g class="tok" style="animation-delay:1.75s">
+ <rect x="334.0" y="252" width="40.0" height="36" rx="8" fill="#d78cfa" fill-opacity=".12" stroke="#d78cfa" stroke-opacity=".6"/>
+ <text x="354.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">I</text>
+</g>
+<g class="tok" style="animation-delay:2.10s">
+ <rect x="384.0" y="252" width="88.0" height="36" rx="8" fill="#ce8aff" fill-opacity=".12" stroke="#ce8aff" stroke-opacity=".6"/>
+ <text x="428.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">build</text>
+</g>
+<g class="tok" style="animation-delay:2.45s">
+ <rect x="482.0" y="252" width="100.0" height="36" rx="8" fill="#c487ff" fill-opacity=".12" stroke="#c487ff" stroke-opacity=".6"/>
+ <text x="532.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">things</text>
+</g>
+<g class="tok" style="animation-delay:2.80s">
+ <rect x="592.0" y="252" width="76.0" height="36" rx="8" fill="#ba84ff" fill-opacity=".12" stroke="#ba84ff" stroke-opacity=".6"/>
+ <text x="630.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">with</text>
+</g>
+<g class="tok" style="animation-delay:3.15s">
+ <rect x="678.0" y="252" width="52.0" height="36" rx="8" fill="#b181ff" fill-opacity=".12" stroke="#b181ff" stroke-opacity=".6"/>
+ <text x="704.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">AI</text>
+</g>
+<g class="tok" style="animation-delay:3.50s">
+ <rect x="740.0" y="252" width="64.0" height="36" rx="8" fill="#a77eff" fill-opacity=".12" stroke="#a77eff" stroke-opacity=".6"/>
+ <text x="772.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">and</text>
+</g>
+<g class="tok" style="animation-delay:3.85s">
+ <rect x="814.0" y="252" width="52.0" height="36" rx="8" fill="#9d7bff" fill-opacity=".12" stroke="#9d7bff" stroke-opacity=".6"/>
+ <text x="840.0" y="276" text-anchor="middle" class="mono" font-size="20" fill="#eeeaf7">ML</text>
+</g>
+<rect class="cur" x="874.0" y="258" width="12" height="24" fill="#eeeaf7"/>
+<line x1="80" y1="346" x2="1120" y2="346" stroke="#ffffff" stroke-opacity=".08"/>
+<text x="80" y="374" class="mono" font-size="13" fill="#a593c2" letter-spacing="1.5">CS @ WAYNE STATE · DETROIT, MI</text>
+<text x="1120" y="374" text-anchor="end" class="mono" font-size="13" fill="#a593c2" letter-spacing="1.5">GITHUB.COM/SANIKA2023</text>
 </svg>
