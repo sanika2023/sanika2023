@@ -38,6 +38,6 @@ Lately I've been building retrieval-augmented systems that cite their sources an
 ### GitHub stats
 
 <p>
-  <img height="160" src="https://github-readme-stats.vercel.app/api?username=YOUR-USERNAME&show_icons=true&hide_border=true&bg_color=f4efe6&title_color=2b3a55&icon_color=e07a5f&text_color=1f2a3d" alt="GitHub stats">
-  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR-USERNAME&layout=compact&hide_border=true&bg_color=f4efe6&title_color=2b3a55&text_color=1f2a3d" alt="Top languages">
+  <img height="160" src="https://github-readme-stats.vercel.app/api?username=sanika2023&show_icons=true&hide_border=true&bg_color=f4efe6&title_color=2b3a55&icon_color=e07a5f&text_color=1f2a3d" alt="GitHub stats">
+  <img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=sanika2023&layout=compact&hide_border=true&bg_color=f4efe6&title_color=2b3a55&text_color=1f2a3d" alt="Top languages">
 </p>
