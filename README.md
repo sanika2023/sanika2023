@@ -19,7 +19,6 @@ Lately I've been building retrieval-augmented systems that cite their sources an
 | **Studying** | B.S. Computer Science, Wayne State (May 2027) |
 | **Focus** | LLMs, RAG, hallucination detection, 3D computer vision |
 | **Experience** | AI Engineering Intern @ IAV (Summer 2026) |
-| **Speaks** | 3 languages |
 
 ### Featured work
 
